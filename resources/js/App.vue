@@ -35,14 +35,17 @@ export default {
 </script>
 
 <template>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
-    <router-link v-if="!token" :to="{ name: 'user.login'}">Login</router-link>
-    <router-link v-if="token" :to="{ name: 'user.personal'}">Personal</router-link>
-    <router-link v-if="!token" :to="{ name: 'user.registration'}">Registration</router-link>
-    <a v-if="token" @click.prevent="logout" href="#">Logout</a>
-    <router-view></router-view>
+    <div>
+        <div class="flex justify-between p-8 w-96 mx-auto">
+
+            <router-link v-if="!token" :to="{ name: 'user.login'}">Login</router-link>
+            <router-link v-if="token" :to="{ name: 'user.personal'}">Personal</router-link>
+            <router-link v-if="!token" :to="{ name: 'user.registration'}">Registration</router-link>
+            <a v-if="token" @click.prevent="logout" href="#">Logout</a>
+        </div>
+
+        <router-view></router-view>
+    </div>
 </template>
 
 <style scoped>
