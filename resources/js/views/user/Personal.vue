@@ -2,10 +2,10 @@
     <div class="w-96 mx-auto">
         <div>
             <div>
-                <input class="w-96 mb-3 rounded-3xl border p-2 border-slate-300" type="text" placeholder="title">
+                <input v-model="title" class="w-96 mb-3 rounded-3xl border p-2 border-slate-300" type="text" placeholder="title">
             </div>
             <div>
-                <textarea class="w-96 mb-3 rounded-3xl border p-2 border-slate-300" placeholder="content"></textarea>
+                <textarea v-model="content" class="w-96 mb-3 rounded-3xl border p-2 border-slate-300" placeholder="content"></textarea>
             </div>
             <div>
                 <a href="#"
@@ -18,6 +18,14 @@
 <script>
 export default {
     name: "Personal",
+    data(){
+        return {
+
+        }
+    },
+    methods: {
+
+    }
 }
 </script>
 
